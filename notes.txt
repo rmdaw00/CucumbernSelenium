@@ -1,0 +1,13 @@
+BDD vs TDD
+https://cucumber.io/blog/bdd/bdd-vs-tdd/
+
+feature files -> Step definition file -> runner files
+
+Example Mapping:
+is Mapping user story with several examples that lead to identification of business rules
+User Story -> Example -> Business Rules
+
+this will result in "feature files"
+
+Feature files
+written in Gherkin Domain specific language Gherkin DSL
