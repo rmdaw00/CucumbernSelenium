@@ -11,3 +11,24 @@ this will result in "feature files"
 
 Feature files
 written in Gherkin Domain specific language Gherkin DSL
+Feature: Menu Management
+  Scenario: Add a menu item
+    Given   …    #condition
+    When    …    #action
+    Then    …    #result
+
+you will notice that step definition file that variables in feature files are converted into parameters of the methods
+these variables are called cucumber variables
+
+whenever running a definition file and it encounters a pending exception, it stops running that entire files
+
+the @CucumberOptions is depreciated so if you want to use cucumber with JUnit5 use
+  @Suite
+  @SelectClasspathResource("com/rmdaw/cucumber/features")
+  //@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.rmdaw.cucumber")
+  //@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
+
+you can save the configurations in junit-platform.properties
+  cucumber.publish.quiet=true
+  cucumber.plugin=pretty,...
+  cucumber.glue=com.rmdaw.cucumber,...
