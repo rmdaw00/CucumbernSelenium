@@ -83,3 +83,8 @@ Hooks @Before @After behave like in JUnit setup teardown, it applies to the enti
 its useful for clearing cache or terminating connections
 use feature background whenever other non dev team members need to know about it
 ________________________________________________
+
+checkout the plugins added to the properties file
+mvn surefire-report:report can be used too
+
+________________________________________________
