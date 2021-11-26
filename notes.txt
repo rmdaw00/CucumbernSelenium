@@ -77,3 +77,9 @@ Note in Spring here that scenarios behave like JUnit test, they are ran independ
    throughout the scenario because its tied to spring application context, while justCount
    is not thus each scenario sees a new justCount. meaning different objects of addingEventSteps
    were used to test each scenario differently
+________________________________________________
+
+Hooks @Before @After behave like in JUnit setup teardown, it applies to the entire scenario
+its useful for clearing cache or terminating connections
+use feature background whenever other non dev team members need to know about it
+________________________________________________

@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-Feature: Menu Management
+Feature: Menu Management 
 	
   Background: Ideal Setup as this happens before each step
     Given I have a menu item with name "Chicken Salad" and price $12
@@ -40,4 +40,4 @@ Feature: Menu Management
   Scenario: Add third menu item
     Given I have a menu item with name "Chicken Salad" and price 12
     When I add that menu item
-    Then Menu item with name "Chicken Salad" should be added
+    Then I should get an error message with "Duplicate Item"
