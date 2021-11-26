@@ -32,3 +32,30 @@ you can save the configurations in junit-platform.properties
   cucumber.publish.quiet=true
   cucumber.plugin=pretty,...
   cucumber.glue=com.rmdaw.cucumber,...
+
+
+@Given("I have a menu item with name {string} and price {int}")
+to
+@Given("I have a menu item with name {string} and price ([1-9]+)")
+the () is called capture group
+
+IMPORTANT to use regexp in stepdefinitions wrap the string inside given/when/Then
+  with "/ ___ /"   or "^ _____ $"
+
+inside is REGULAR Expression,
+SUMMARY OF REGULAR EXPRESSIONS
++ is a Quantifier
+  +   1-*
+  *   0-*
+  ?   0-1
+  {x} x=exact quantity
+
+  ^   anything but e.g. [^Z]  Zebra=false, zebra=true, bra=true
+
+@Given("I have a menu item with name {string} and price ([\\d]+)")
+  \d    d: single digit 0-9
+  \w    single word char: a-Z 0-9 _
+  \s    whitespace char: ' ', tabs, endofline
+
+@Given("I have a menu item with name \"([^\"])\" and price ([\\d]+)")
+\"([^\"]+)\"  is  "([^"])+"  which is anything but " 1-*

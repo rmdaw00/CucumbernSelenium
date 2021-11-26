@@ -13,8 +13,8 @@ public class menuManagementSteps {
 	RestaurantMenuItem restaurantMenuItem;
 	RestaurantMenu branchMenu = new RestaurantMenu();
 	
-	@Given("I have a menu item with name {string} and price {int}")
-	public void i_have_a_menu_item_with_name_and_price_condition(String newMenuItem, Integer price) {
+	@Given("/I have a menu item with name \"([^\"]+)\" and price ([$]?)(\\d+)/")
+	public void i_have_a_menu_item_with_name_and_price_condition(String newMenuItem, String currencyType, Integer price) {
 	    restaurantMenuItem = new RestaurantMenuItem(newMenuItem, newMenuItem, price);
 	    System.out.println("step 1");
 	}
