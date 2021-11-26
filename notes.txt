@@ -33,6 +33,8 @@ you can save the configurations in junit-platform.properties
   cucumber.plugin=pretty,...
   cucumber.glue=com.rmdaw.cucumber,...
 
+________________________________________________
+
 
 @Given("I have a menu item with name {string} and price {int}")
 to
@@ -59,3 +61,6 @@ SUMMARY OF REGULAR EXPRESSIONS
 
 @Given("I have a menu item with name \"([^\"])\" and price ([\\d]+)")
 \"([^\"]+)\"  is  "([^"])+"  which is anything but " 1-*
+________________________________________________
+
+Tags help filter tests
