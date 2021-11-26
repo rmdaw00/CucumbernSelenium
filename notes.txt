@@ -82,6 +82,8 @@ ________________________________________________
 Hooks @Before @After behave like in JUnit setup teardown, it applies to the entire scenario
 its useful for clearing cache or terminating connections
 use feature background whenever other non dev team members need to know about it
+Background steps execute after the before hooks.
+
 ________________________________________________
 
 checkout the plugins added to the properties file
