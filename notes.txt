@@ -64,3 +64,16 @@ SUMMARY OF REGULAR EXPRESSIONS
 ________________________________________________
 
 Tags help filter tests
+mvn test -Dgroups="SmokeTest,NightlyBuildTest"
+or
+mvn verify -Dgroups="SmokeTest,NightlyBuildTest"
+________________________________________________
+Background runs before every scenario, its like beforeach but actually documented and shown to everyone
+Note how each scenario has a new RestaurantMenu object, showing how scenarios behave like JUnit tests
+each are independent and have fresh copy of parent object and new memory
+
+Note in Spring here that scenarios behave like JUnit test, they are ran independent though they all
+   rely on the spring context that has a state, LocalDB is in memory DB that is persisted
+   throughout the scenario because its tied to spring application context, while justCount
+   is not thus each scenario sees a new justCount. meaning different objects of addingEventSteps
+   were used to test each scenario differently

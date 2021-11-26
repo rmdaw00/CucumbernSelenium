@@ -18,6 +18,11 @@
 #Sample Feature Definition Template
 Feature: Menu Management
 	
+  Background: Ideal Setup as this happens before each step
+    Given I have a menu item with name "Chicken Salad" and price $12
+    When I add that menu item
+    Then Menu item with name "Chicken Salad" should be added
+	
 	@SmokeTest
   Scenario: Add a menu item
     Given I have a menu item with name "Cucumber Sandwich" and price $20
