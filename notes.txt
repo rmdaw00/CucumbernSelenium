@@ -90,3 +90,6 @@ checkout the plugins added to the properties file
 mvn surefire-report:report can be used too
 
 ________________________________________________
+
+note that int and double share values
+if doing financial calculations use bigInteger, and BigDecimal
